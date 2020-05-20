@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhfy.zhfyapi.mapper.Yd_FyxxMapper">
+  <resultMap id="BaseResultMap" type="com.zhfy.zhfyapi.model.Yd_Fyxx">
+    <result column="FYMC" jdbcType="VARCHAR" property="fymc" />
+    <result column="FYDM" jdbcType="CHAR" property="fydm" />
+    <result column="XZJBDM" jdbcType="CHAR" property="xzjbdm" />
+    <result column="SFDM" jdbcType="CHAR" property="sfdm" />
+    <result column="ZSDM" jdbcType="CHAR" property="zsdm" />
+    <result column="XQDM" jdbcType="CHAR" property="xqdm" />
+    <result column="SYBZ" jdbcType="CHAR" property="sybz" />
+    <result column="YXBZ" jdbcType="CHAR" property="yxbz" />
+    <result column="GNXHC" jdbcType="VARCHAR" property="gnxhc" />
+    <result column="JCCZ" jdbcType="VARCHAR" property="jccz" />
+    <result column="LXR" jdbcType="VARCHAR" property="lxr" />
+    <result column="FYDH" jdbcType="VARCHAR" property="fydh" />
+    <result column="FYDZ" jdbcType="VARCHAR" property="fydz" />
+    <result column="FYBM" jdbcType="VARCHAR" property="fybm" />
+    <result column="FYWZ" jdbcType="VARCHAR" property="fywz" />
+  </resultMap>
+  <insert id="insert" parameterType="com.zhfy.zhfyapi.model.Yd_Fyxx">
+    insert into YD_FYXX (FYMC, FYDM, XZJBDM, 
+      SFDM, ZSDM, XQDM, SYBZ, 
+      YXBZ, GNXHC, JCCZ, LXR, 
+      FYDH, FYDZ, FYBM, FYWZ
+      )
+    values (#{fymc,jdbcType=VARCHAR}, #{fydm,jdbcType=CHAR}, #{xzjbdm,jdbcType=CHAR}, 
+      #{sfdm,jdbcType=CHAR}, #{zsdm,jdbcType=CHAR}, #{xqdm,jdbcType=CHAR}, #{sybz,jdbcType=CHAR}, 
+      #{yxbz,jdbcType=CHAR}, #{gnxhc,jdbcType=VARCHAR}, #{jccz,jdbcType=VARCHAR}, #{lxr,jdbcType=VARCHAR}, 
+      #{fydh,jdbcType=VARCHAR}, #{fydz,jdbcType=VARCHAR}, #{fybm,jdbcType=VARCHAR}, #{fywz,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zhfy.zhfyapi.model.Yd_Fyxx">
+    insert into YD_FYXX
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="fymc != null">
+        FYMC,
+      </if>
+      <if test="fydm != null">
+        FYDM,
+      </if>
+      <if test="xzjbdm != null">
+        XZJBDM,
+      </if>
+      <if test="sfdm != null">
+        SFDM,
+      </if>
+      <if test="zsdm != null">
+        ZSDM,
+      </if>
+      <if test="xqdm != null">
+        XQDM,
+      </if>
+      <if test="sybz != null">
+        SYBZ,
+      </if>
+      <if test="yxbz != null">
+        YXBZ,
+      </if>
+      <if test="gnxhc != null">
+        GNXHC,
+      </if>
+      <if test="jccz != null">
+        JCCZ,
+      </if>
+      <if test="lxr != null">
+        LXR,
+      </if>
+      <if test="fydh != null">
+        FYDH,
+      </if>
+      <if test="fydz != null">
+        FYDZ,
+      </if>
+      <if test="fybm != null">
+        FYBM,
+      </if>
+      <if test="fywz != null">
+        FYWZ,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="fymc != null">
+        #{fymc,jdbcType=VARCHAR},
+      </if>
+      <if test="fydm != null">
+        #{fydm,jdbcType=CHAR},
+      </if>
+      <if test="xzjbdm != null">
+        #{xzjbdm,jdbcType=CHAR},
+      </if>
+      <if test="sfdm != null">
+        #{sfdm,jdbcType=CHAR},
+      </if>
+      <if test="zsdm != null">
+        #{zsdm,jdbcType=CHAR},
+      </if>
+      <if test="xqdm != null">
+        #{xqdm,jdbcType=CHAR},
+      </if>
+      <if test="sybz != null">
+        #{sybz,jdbcType=CHAR},
+      </if>
+      <if test="yxbz != null">
+        #{yxbz,jdbcType=CHAR},
+      </if>
+      <if test="gnxhc != null">
+        #{gnxhc,jdbcType=VARCHAR},
+      </if>
+      <if test="jccz != null">
+        #{jccz,jdbcType=VARCHAR},
+      </if>
+      <if test="lxr != null">
+        #{lxr,jdbcType=VARCHAR},
+      </if>
+      <if test="fydh != null">
+        #{fydh,jdbcType=VARCHAR},
+      </if>
+      <if test="fydz != null">
+        #{fydz,jdbcType=VARCHAR},
+      </if>
+      <if test="fybm != null">
+        #{fybm,jdbcType=VARCHAR},
+      </if>
+      <if test="fywz != null">
+        #{fywz,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+</mapper>
