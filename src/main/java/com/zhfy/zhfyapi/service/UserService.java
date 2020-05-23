@@ -1,7 +1,11 @@
+
 package com.zhfy.zhfyapi.service;
 
-import com.zhfy.zhfyapi.model.Yd_Yhxx;
+
 import org.springframework.stereotype.Component;
+
+import java.util.Map;
+
 
 /**
  * @Description: java接口作用描述
@@ -12,8 +16,9 @@ import org.springframework.stereotype.Component;
  * @UpdateRemark: 修改内容
  * @Version: 1.0
  */
+
 @Component
 public interface UserService {
-    Yd_Yhxx login(String yhbh, String yhmm);
+    Map<Object,Object> login(String yhbh, String yhmm);
 
 }
