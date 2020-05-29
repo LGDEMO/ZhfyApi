@@ -1,10 +1,11 @@
 package com.zhfy.zhfyapi.controller;
 
+
 import com.zhfy.zhfyapi.model.Yd_Yhxx;
 import com.zhfy.zhfyapi.service.UserService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -47,5 +48,6 @@ public class UserController {
         resultMap = userService.login(yd_yhxx.getYhbh(), yd_yhxx.getYhmm());
         return resultMap;
     }
+
 
 }
