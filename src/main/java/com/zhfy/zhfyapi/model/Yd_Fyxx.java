@@ -150,4 +150,25 @@ public class Yd_Fyxx {
     public void setFywz(String fywz) {
         this.fywz = fywz;
     }
+
+    @Override
+    public String toString() {
+        return "Yd_Fyxx{" +
+                "fydm='" + fydm + '\'' +
+                ", fymc='" + fymc + '\'' +
+                ", xzjbdm='" + xzjbdm + '\'' +
+                ", sfdm='" + sfdm + '\'' +
+                ", zsdm='" + zsdm + '\'' +
+                ", xqdm='" + xqdm + '\'' +
+                ", sybz='" + sybz + '\'' +
+                ", yxbz='" + yxbz + '\'' +
+                ", gnxhc='" + gnxhc + '\'' +
+                ", jccz='" + jccz + '\'' +
+                ", lxr='" + lxr + '\'' +
+                ", fydh='" + fydh + '\'' +
+                ", fydz='" + fydz + '\'' +
+                ", fybm='" + fybm + '\'' +
+                ", fywz='" + fywz + '\'' +
+                '}';
+    }
 }

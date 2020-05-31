@@ -4,6 +4,7 @@ package com.zhfy.zhfyapi.controller;
 import com.zhfy.zhfyapi.model.Yd_Yhxx;
 import com.zhfy.zhfyapi.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -21,6 +22,7 @@ import java.util.Map;
  * @Version: 1.0
  */
 @RestController
+@SpringBootApplication
 public class UserController {
 
     @Autowired
@@ -44,6 +46,7 @@ public class UserController {
         resultMap = userService.login(yd_yhxx.getYhbh(), yd_yhxx.getYhmm());
         return resultMap;
     }
+
     /**
     
     * 方法实现说明
