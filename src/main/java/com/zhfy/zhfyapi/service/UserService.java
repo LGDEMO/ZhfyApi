@@ -15,7 +15,7 @@ import java.util.Map;
 * @UpdateRemark:   修改内容
 * @Version:        1.0
 */
-@Component
+
 public interface UserService {
     Map<Object,Object> login(String yhbh, String yhmm);
 

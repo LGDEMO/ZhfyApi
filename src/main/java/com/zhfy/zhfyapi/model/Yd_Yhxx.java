@@ -1,5 +1,7 @@
 package com.zhfy.zhfyapi.model;
 
+import java.util.List;
+
 public class Yd_Yhxx {
     private String yhbh;
 
@@ -30,6 +32,15 @@ public class Yd_Yhxx {
     private String sfzh;
 
     private String yhjsdm;
+    private List<Yd_Fyxx> yd_fyxxlist;
+
+    public List<Yd_Fyxx> getYd_fyxxlist() {
+        return yd_fyxxlist;
+    }
+
+    public void setYd_fyxxlist(List<Yd_Fyxx> yd_fyxxlist) {
+        this.yd_fyxxlist = yd_fyxxlist;
+    }
 
     public String getYhbh() {
         return yhbh;
@@ -149,5 +160,27 @@ public class Yd_Yhxx {
 
     public void setYhjsdm(String yhjsdm) {
         this.yhjsdm = yhjsdm;
+    }
+
+    @Override
+    public String toString() {
+        return "Yd_Yhxx{" +
+                "yhbh='" + yhbh + '\'' +
+                ", yhxm='" + yhxm + '\'' +
+                ", yhmm='" + yhmm + '\'' +
+                ", fydm='" + fydm + '\'' +
+                ", bmmc='" + bmmc + '\'' +
+                ", yxdz='" + yxdz + '\'' +
+                ", bgdh='" + bgdh + '\'' +
+                ", yhwx='" + yhwx + '\'' +
+                ", yhqq='" + yhqq + '\'' +
+                ", yhsj='" + yhsj + '\'' +
+                ", yhgnxh='" + yhgnxh + '\'' +
+                ", yxbz='" + yxbz + '\'' +
+                ", lxr='" + lxr + '\'' +
+                ", sfzh='" + sfzh + '\'' +
+                ", yhjsdm='" + yhjsdm + '\'' +
+                ", yd_fyxxlist=" + yd_fyxxlist +
+                '}';
     }
 }
