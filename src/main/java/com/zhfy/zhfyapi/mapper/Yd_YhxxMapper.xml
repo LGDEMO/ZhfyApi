@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhfy.zhfyapi.mapper.Yd_YhxxMapper">
+  <resultMap id="BaseResultMap" type="com.zhfy.zhfyapi.model.Yd_Yhxx">
+    <id column="YHBH" jdbcType="VARCHAR" property="yhbh" />
+    <result column="YHXM" jdbcType="VARCHAR" property="yhxm" />
+    <result column="YHMM" jdbcType="VARCHAR" property="yhmm" />
+    <result column="FYDM" jdbcType="CHAR" property="fydm" />
+    <result column="BMMC" jdbcType="VARCHAR" property="bmmc" />
+    <result column="YXDZ" jdbcType="VARCHAR" property="yxdz" />
+    <result column="BGDH" jdbcType="VARCHAR" property="bgdh" />
+    <result column="YHWX" jdbcType="VARCHAR" property="yhwx" />
+    <result column="YHQQ" jdbcType="VARCHAR" property="yhqq" />
+    <result column="YHSJ" jdbcType="VARCHAR" property="yhsj" />
+    <result column="YHGNXH" jdbcType="VARCHAR" property="yhgnxh" />
+    <result column="YXBZ" jdbcType="CHAR" property="yxbz" />
+    <result column="LXR" jdbcType="CHAR" property="lxr" />
+    <result column="sfzh" jdbcType="VARCHAR" property="sfzh" />
+    <result column="YHJSDM" jdbcType="CHAR" property="yhjsdm" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    YHBH, YHXM, YHMM, FYDM, BMMC, YXDZ, BGDH, YHWX, YHQQ, YHSJ, YHGNXH, YXBZ, LXR, sfzh, 
+    YHJSDM
+  </sql>
+
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from YD_YHXX
+    where YHBH = #{yhbh,jdbcType=VARCHAR}
+  </select>
+
+  <select id="login" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select
+   YHBH, YHXM, YHMM, FYDM, BMMC, YXDZ, BGDH, YHWX, YHQQ, YHSJ, YHGNXH, YXBZ, LXR,YHJSDM
+    from YD_YHXX
+    where YHBH = #{yhbh,jdbcType=VARCHAR}
+  </select>
+
+
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from YD_YHXX
+    where YHBH = #{yhbh,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.zhfy.zhfyapi.model.Yd_Yhxx">
+    insert into YD_YHXX (YHBH, YHXM, YHMM, 
+      FYDM, BMMC, YXDZ, BGDH, 
+      YHWX, YHQQ, YHSJ, YHGNXH, 
+      YXBZ, LXR, sfzh, YHJSDM
+      )
+    values (#{yhbh,jdbcType=VARCHAR}, #{yhxm,jdbcType=VARCHAR}, #{yhmm,jdbcType=VARCHAR}, 
+      #{fydm,jdbcType=CHAR}, #{bmmc,jdbcType=VARCHAR}, #{yxdz,jdbcType=VARCHAR}, #{bgdh,jdbcType=VARCHAR}, 
+      #{yhwx,jdbcType=VARCHAR}, #{yhqq,jdbcType=VARCHAR}, #{yhsj,jdbcType=VARCHAR}, #{yhgnxh,jdbcType=VARCHAR}, 
+      #{yxbz,jdbcType=CHAR}, #{lxr,jdbcType=CHAR}, #{sfzh,jdbcType=VARCHAR}, #{yhjsdm,jdbcType=CHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.zhfy.zhfyapi.model.Yd_Yhxx">
+    insert into YD_YHXX
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="yhbh != null">
+        YHBH,
+      </if>
+      <if test="yhxm != null">
+        YHXM,
+      </if>
+      <if test="yhmm != null">
+        YHMM,
+      </if>
+      <if test="fydm != null">
+        FYDM,
+      </if>
+      <if test="bmmc != null">
+        BMMC,
+      </if>
+      <if test="yxdz != null">
+        YXDZ,
+      </if>
+      <if test="bgdh != null">
+        BGDH,
+      </if>
+      <if test="yhwx != null">
+        YHWX,
+      </if>
+      <if test="yhqq != null">
+        YHQQ,
+      </if>
+      <if test="yhsj != null">
+        YHSJ,
+      </if>
+      <if test="yhgnxh != null">
+        YHGNXH,
+      </if>
+      <if test="yxbz != null">
+        YXBZ,
+      </if>
+      <if test="lxr != null">
+        LXR,
+      </if>
+      <if test="sfzh != null">
+        sfzh,
+      </if>
+      <if test="yhjsdm != null">
+        YHJSDM,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="yhbh != null">
+        #{yhbh,jdbcType=VARCHAR},
+      </if>
+      <if test="yhxm != null">
+        #{yhxm,jdbcType=VARCHAR},
+      </if>
+      <if test="yhmm != null">
+        #{yhmm,jdbcType=VARCHAR},
+      </if>
+      <if test="fydm != null">
+        #{fydm,jdbcType=CHAR},
+      </if>
+      <if test="bmmc != null">
+        #{bmmc,jdbcType=VARCHAR},
+      </if>
+      <if test="yxdz != null">
+        #{yxdz,jdbcType=VARCHAR},
+      </if>
+      <if test="bgdh != null">
+        #{bgdh,jdbcType=VARCHAR},
+      </if>
+      <if test="yhwx != null">
+        #{yhwx,jdbcType=VARCHAR},
+      </if>
+      <if test="yhqq != null">
+        #{yhqq,jdbcType=VARCHAR},
+      </if>
+      <if test="yhsj != null">
+        #{yhsj,jdbcType=VARCHAR},
+      </if>
+      <if test="yhgnxh != null">
+        #{yhgnxh,jdbcType=VARCHAR},
+      </if>
+      <if test="yxbz != null">
+        #{yxbz,jdbcType=CHAR},
+      </if>
+      <if test="lxr != null">
+        #{lxr,jdbcType=CHAR},
+      </if>
+      <if test="sfzh != null">
+        #{sfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="yhjsdm != null">
+        #{yhjsdm,jdbcType=CHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.zhfy.zhfyapi.model.Yd_Yhxx">
+    update YD_YHXX
+    <set>
+      <if test="yhxm != null">
+        YHXM = #{yhxm,jdbcType=VARCHAR},
+      </if>
+      <if test="yhmm != null">
+        YHMM = #{yhmm,jdbcType=VARCHAR},
+      </if>
+      <if test="fydm != null">
+        FYDM = #{fydm,jdbcType=CHAR},
+      </if>
+      <if test="bmmc != null">
+        BMMC = #{bmmc,jdbcType=VARCHAR},
+      </if>
+      <if test="yxdz != null">
+        YXDZ = #{yxdz,jdbcType=VARCHAR},
+      </if>
+      <if test="bgdh != null">
+        BGDH = #{bgdh,jdbcType=VARCHAR},
+      </if>
+      <if test="yhwx != null">
+        YHWX = #{yhwx,jdbcType=VARCHAR},
+      </if>
+      <if test="yhqq != null">
+        YHQQ = #{yhqq,jdbcType=VARCHAR},
+      </if>
+      <if test="yhsj != null">
+        YHSJ = #{yhsj,jdbcType=VARCHAR},
+      </if>
+      <if test="yhgnxh != null">
+        YHGNXH = #{yhgnxh,jdbcType=VARCHAR},
+      </if>
+      <if test="yxbz != null">
+        YXBZ = #{yxbz,jdbcType=CHAR},
+      </if>
+      <if test="lxr != null">
+        LXR = #{lxr,jdbcType=CHAR},
+      </if>
+      <if test="sfzh != null">
+        sfzh = #{sfzh,jdbcType=VARCHAR},
+      </if>
+      <if test="yhjsdm != null">
+        YHJSDM = #{yhjsdm,jdbcType=CHAR},
+      </if>
+    </set>
+    where YHBH = #{yhbh,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.zhfy.zhfyapi.model.Yd_Yhxx">
+    update YD_YHXX
+    set YHXM = #{yhxm,jdbcType=VARCHAR},
+      YHMM = #{yhmm,jdbcType=VARCHAR},
+      FYDM = #{fydm,jdbcType=CHAR},
+      BMMC = #{bmmc,jdbcType=VARCHAR},
+      YXDZ = #{yxdz,jdbcType=VARCHAR},
+      BGDH = #{bgdh,jdbcType=VARCHAR},
+      YHWX = #{yhwx,jdbcType=VARCHAR},
+      YHQQ = #{yhqq,jdbcType=VARCHAR},
+      YHSJ = #{yhsj,jdbcType=VARCHAR},
+      YHGNXH = #{yhgnxh,jdbcType=VARCHAR},
+      YXBZ = #{yxbz,jdbcType=CHAR},
+      LXR = #{lxr,jdbcType=CHAR},
+      sfzh = #{sfzh,jdbcType=VARCHAR},
+      YHJSDM = #{yhjsdm,jdbcType=CHAR}
+    where YHBH = #{yhbh,jdbcType=VARCHAR}
+  </update>
+</mapper>
