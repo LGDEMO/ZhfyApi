@@ -1,10 +1,8 @@
 package com.zhfy.zhfyapi.controller;
-
-
 import com.zhfy.zhfyapi.model.Yd_Yhxx;
 import com.zhfy.zhfyapi.service.UserService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
@@ -22,7 +20,6 @@ import java.util.Map;
  * @Version: 1.0
  */
 @RestController
-@SpringBootApplication
 public class UserController {
 
     @Autowired
@@ -31,21 +28,24 @@ public class UserController {
     public void setService(UserService userService) {
         this.userService = userService;
     }
+
     /**
-     * 方法实现说明
-     *
+     * 登录方法实现说明
+     * @author      ligang
      * @param null
      * @return
-     * @throws
-     * @author ligang
-     * @date 2020/5/23 18:44
+     * @exception
+     * @date        2020/6/1 14:58
      */
-    @PostMapping("user/login")
-    public Map login(@RequestBody Yd_Yhxx yd_yhxx) {
-        Map<Object, Object> resultMap = new HashMap<>();
-        resultMap = userService.login(yd_yhxx.getYhbh(), yd_yhxx.getYhmm());
-        return resultMap;
+    @GetMapping("user/login")
+    public Yd_Yhxx Login(@Param("yhbh") String yhbh){
+        Yd_Yhxx yd_yhxx = new Yd_Yhxx();
+        if(yhbh != null && yhbh !=" "){
+            yd_yhxx  = userService.selectByPrimaryKey(yhbh);
+        }
+        return yd_yhxx;
     }
+
 
     /**
     * 方法实现说明
@@ -59,5 +59,6 @@ public class UserController {
         public  String SayHello(){
             return  " hello world!!!!";
     }
+
 
 }

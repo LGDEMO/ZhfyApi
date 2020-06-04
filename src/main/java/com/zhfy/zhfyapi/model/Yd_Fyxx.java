@@ -1,7 +1,5 @@
 package com.zhfy.zhfyapi.model;
 
-import java.util.List;
-
 public class Yd_Fyxx {
     private String fydm;
 
@@ -32,38 +30,6 @@ public class Yd_Fyxx {
     private String fybm;
 
     private String fywz;
-
-    private List<Yd_Yhxx> ydYhxxList;
-
-    public List<Yd_Yhxx> getYdYhxxList() {
-        return ydYhxxList;
-    }
-
-    public void setYdYhxxList(List<Yd_Yhxx> ydYhxxList) {
-        this.ydYhxxList = ydYhxxList;
-    }
-
-    @Override
-    public String toString() {
-        return "Yd_Fyxx{" +
-                "fydm='" + fydm + '\'' +
-                ", fymc='" + fymc + '\'' +
-                ", xzjbdm='" + xzjbdm + '\'' +
-                ", sfdm='" + sfdm + '\'' +
-                ", zsdm='" + zsdm + '\'' +
-                ", xqdm='" + xqdm + '\'' +
-                ", sybz='" + sybz + '\'' +
-                ", yxbz='" + yxbz + '\'' +
-                ", gnxhc='" + gnxhc + '\'' +
-                ", jccz='" + jccz + '\'' +
-                ", lxr='" + lxr + '\'' +
-                ", fydh='" + fydh + '\'' +
-                ", fydz='" + fydz + '\'' +
-                ", fybm='" + fybm + '\'' +
-                ", fywz='" + fywz + '\'' +
-                ", ydYhxxList=" + ydYhxxList +
-                '}';
-    }
 
     public String getFydm() {
         return fydm;

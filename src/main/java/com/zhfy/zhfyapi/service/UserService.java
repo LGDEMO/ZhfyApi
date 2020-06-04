@@ -2,7 +2,7 @@
 package com.zhfy.zhfyapi.service;
 
 
-import org.springframework.stereotype.Component;
+import com.zhfy.zhfyapi.model.Yd_Yhxx;
 
 import java.util.Map;
 
@@ -18,5 +18,6 @@ import java.util.Map;
 
 public interface UserService {
     Map<Object,Object> login(String yhbh, String yhmm);
-
+    Yd_Yhxx selectByPrimaryKey(String yhbh);
+    Yd_Yhxx login(String yhbh);
 }
